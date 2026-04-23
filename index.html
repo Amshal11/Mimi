@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mimi</title>
+    <link rel="icon" type="image/webp" href="images/IMG_9500.jpg">
+    <style>
+      .btn {
+        background-color: antiquewhite;
+        color: rgb(121, 168, 208);
+        border-radius: 25px;
+        border: 2px solid rgba(0, 0, 0, 0.25);
+        padding: 10px 16px;
+        cursor: pointer;
+      }
+      .btn:active { transform: translateY(1px); }
+
+      .journey {
+        max-width: 900px;
+        margin: 18px auto;
+        background: rgb(232, 219, 219);
+        border: 2px solid black;
+        border-radius: 12px;
+        padding: 14px;
+        font-style: oblique;
+      }
+      .journey.hidden { display: none; }
+      .journey h2 { margin: 8px 0 12px; text-align: center; }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .card {
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        padding: 12px;
+        background: rgb(232, 219, 219);
+      }
+      .card-title {
+        margin: 0 0 8px;
+        font-weight: 700;
+      }
+      .photo-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-top: 2px;
+        border: 2px solid rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        overflow: hidden;
+        background: antiquewhite;
+      }
+      @media (max-width: 700px) {
+        .photo-row { grid-template-columns: 1fr; }
+      }
+      .card img {
+        display: block;
+        margin-top: 0;
+        max-width: 100%;
+        max-height: 260px;
+        border: 2px solid rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body style="background-color:rgb(232, 219, 219);">
+    <h1 style="text-align: center;"> <span style="background-color:rgb(232, 219, 219); color: black;"> I am Mimi </span></h1>
+    <hr>
+    <br>
+    <img id="mimi-image" src="images/IMG_9500.jpg" alt="My test image"
+    height="500" style="display: block; margin: 0 auto; border: 2px solid; cursor: pointer;" />
+    <hr>
+    <br>
+    <pre> 
+    <div style="background-color: white; padding: 10px; border:2px solid black; font-style:oblique">
+    Mimi is our little superhero who is the most cute and funniest member of the family. 
+    She is known for her use of high-tech crying and her ability to not sleep. 
+    Mimi is also known for her dedication to making us laugh and smile. That is just for uncle and aunts, Mifzaal and Binth go through every emotion with her.
+    </div></pre>
+    <h4> Mimi UNCs & Aunts: </h4>
+    <dl style="border: 2px solid black; padding: 10px; background-color:white; font-style: oblique;">
+      <dt> zaza </dt>
+      <dt> Fitte </dt>
+      <dt> roro </dt>
+      <dt> nini </dt>
+      <dt> chips </dt>
+    </dl>
+    <br>
+    <h4> Mum & Dad: </h4>
+    <dl style="border: 2px solid black; padding: 10px; background-color:white; font-style: oblique;">
+      <dt> Binth </dt>
+      <dt> Mifzaal </dt>
+    </dl>
+    <div style="text-align:center; margin-top: 12px;">
+      <button id="journey-btn" class="btn">Mimi’s Journey (0–4 months)</button>
+      <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <button class="btn" style="margin-left: 10px;">Press</button>
+      </a>
+    </div>
+
+    <section id="journey" class="journey hidden">
+      <h2>Mimi’s Journey</h2>
+      <div class="timeline">
+        <div class="card">
+          <p class="card-title">0 months — Born: Welcome to the world, Mimi.</p>
+          <div class="photo-row">
+            <img src="images/B.JPG" alt="Mimi at 0 months (photo 1)">
+            <img src="images/BB.JPG" alt="Mimi at 0 months (photo 2)">
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">1 month: Getting stronger every day</p>
+          <div class="photo-row">
+            <img src="images/1.JPG" alt="Mimi at 1 month (photo 1)">
+            <img src="images/11.JPG" alt="Mimi at 1 month (photo 2)">
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">2 months: More smiles, more personality.</p>
+          <div class="photo-row">
+            <img src="images/2.JPG" alt="Mimi at 2 months (photo 1)">
+            <img src="images/22.JPG" alt="Mimi at 2 months (photo 2)">
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">3 months: Big progress — more reactions and fun.</p>
+          <div class="photo-row">
+            <img src="images/3.JPG" alt="Mimi at 3 months (photo 1)">
+            <img src="images/33.JPG" alt="Mimi at 3 months (photo 2)">
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">4 months — Now: Current Mimi, Iconic.</p>
+          <div>Current Mimi: iconic.</div>
+          <div class="photo-row">
+            <img src="images/4.JPG" alt="Mimi at 4 months (photo 1)">
+            <img src="images/44.JPG" alt="Mimi at 4 months (photo 2)">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Toggle between the provided images when clicked
+      const mimiImages = [
+        "images/IMG_9500.jpg",
+        "images/IMG_9463.jpg",
+        "images/IMG_9506.jpg",
+        "images/IMG_9512.jpg",
+        "images/IMG_9518.jpg",
+        "images/IMG_9550.jpg",
+        "images/IMG_9580.jpg",
+        "images/IMG_9584.jpg",
+        "images/IMG_9596.jpg",
+        "images/IMG_9601.jpg"
+      ];
+      const mimiImgEl = document.getElementById("mimi-image");
+      let mimiImgIndex = 0;
+      mimiImgEl.addEventListener("click", () => {
+        mimiImgIndex = (mimiImgIndex + 1) % mimiImages.length;
+        mimiImgEl.src = mimiImages[mimiImgIndex];
+      });
+
+      // Show/hide the Journey section
+      const journeyBtn = document.getElementById("journey-btn");
+      const journeySection = document.getElementById("journey");
+      journeyBtn.addEventListener("click", () => {
+        const isHidden = journeySection.classList.contains("hidden");
+        if (isHidden) {
+          journeySection.classList.remove("hidden");
+          journeyBtn.textContent = "Hide Mimi’s Journey";
+          journeySection.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          journeySection.classList.add("hidden");
+          journeyBtn.textContent = "Mimi’s Journey (0–4 months)";
+        }
+      });
+    </script>
+  </body>
+  
+</html>
